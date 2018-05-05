@@ -19,7 +19,7 @@
   <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
         href="/feeds/all.atom.xml">
   
-  <meta name="description" content="">
+  <meta name="description" content="Your name Your email Your message">
   <script>
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
@@ -64,10 +64,22 @@
   <article class="article">
     <div class="content">
       <form action="https://formspree.io/alexbatchelor18@gmail.com" method="POST">
-    <input type="text" name="name">
-    <input type="email" name="_replyto">
-    <input type="submit" value="Send">
-    <input type="text" name="_gotcha" style="display:none" />
+    <fieldset>
+        <label for="name">Your name</label><br>
+        <input type="text" name="name" placeholder="Name" required>
+    </fieldset>
+    <fieldset>
+        <label for="_replyto">Your email</label><br>
+        <input type="email" name="_replyto" placeholder="example@domain.com" required>
+    </fieldset>
+    <fieldset>
+        <label for="message">Your message</label><br>
+        <textarea name="message" rows="1" placeholder="Message" required></textarea>
+    </fieldset>
+    <input class="hidden" type="text" name="_gotcha" style="display:none">
+    <input class="hidden" type="hidden" name="_subject" value="Message via http://domain.com">
+
+    <input class="button submit" type="submit" value="Send">
 </form>
     </div>
   </article>
